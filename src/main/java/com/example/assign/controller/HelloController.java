@@ -11,10 +11,16 @@ public class HelloController {
 //    public String sayHelloWithPath(@PathVariable String name) {
 //        return "Hello " + name + " from BridgeLabz";
 //    }
-@PostMapping("/post")
-public String sayHelloWithPost(@RequestBody UserDTO user) {
-    return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
-}
+//@PostMapping("/post")
+//public String sayHelloWithPost(@RequestBody UserDTO user) {
+//    return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+//}
+
+    @PutMapping("/put/{firstName}")
+    public String sayHelloWithPut(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
+
 
 
 
